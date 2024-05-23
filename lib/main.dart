@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_day_21/tasks/task_1.dart';
+import 'package:flutter_day_21/tasks/task_2.dart';
+import 'package:flutter_day_21/tasks/task_3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: PageView(
         children: [
-          Task1()
+          Task1(),
+          Task2(),
+          Task3(),
         ],
       ),
     );
