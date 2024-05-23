@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 
 class Task2 extends StatelessWidget {
   Task2({super.key});
-  var result = Isolate.run(() => heavyComputation());
+
+  final Future<int> result = Isolate.run(() => heavyComputation());
+
   @override
   Widget build(BuildContext context) {
     // int result = heavyComputation();
@@ -12,14 +14,13 @@ class Task2 extends StatelessWidget {
       appBar: AppBar(title: const Text('Heavy Computation')),
       body: Center(
         child: FutureBuilder(
-          future: result,
-          builder: (context, snapshot) {
-            if (!snapshot.hasData) {
-              return const CircularProgressIndicator();
-            }
-            return Text('Result: ${snapshot.data}');
-          }
-        ),
+            future: result,
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) {
+                return const CircularProgressIndicator();
+              }
+              return Text('Result: ${snapshot.data}');
+            }),
       ),
     );
   }

@@ -12,7 +12,8 @@ class Task1 extends StatelessWidget {
       ),
       body: ListView.builder(
         itemCount: 1000,
-        itemBuilder: (context, index) => Text('$index'),
+        itemBuilder: (context, index) =>
+            Text('$index', textAlign: TextAlign.center),
       ),
     );
   }

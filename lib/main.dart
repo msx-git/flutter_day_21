@@ -17,9 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: PageView(
         children: [
-          Task1(),
+          const Task1(),
           Task2(),
-          Task3(),
+          const Task3(),
         ],
       ),
     );
